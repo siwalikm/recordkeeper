@@ -1,0 +1,58 @@
+@import 'bulma';
+
+.card-container {
+  text-align: center;
+  .card {
+    text-align: left;
+    width: 30%;
+    display: inline-block;
+    margin: 10px;
+    img.cover {
+      height: 185px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      .newImage {
+        width: 50%;
+      }
+    }
+  }
+}
+
+img.vinyl {
+  float: left;
+  position: absolute;
+  right: 20px;
+  top: -170px;
+  -o-animation: spin 4s linear infinite;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 5s linear infinite;
+}
+
+@-o-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+strong[contenteditable="true"] {
+  border-bottom: 3px dotted #00d2b2;
+  padding: 1px;
+}

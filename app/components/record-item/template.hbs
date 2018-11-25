@@ -1,0 +1,32 @@
+<div class="card-container">
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Album: {{input value=currentRecord.albumName class="input"}}
+
+      </p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        Album Art URL: {{input value=currentRecord.albumCover class="input"}}
+        <div>
+          Artist: {{input value=currentRecord.artistName class="input"}}
+        </div>
+        <div>
+          Year: {{input value=currentRecord.year class="input"}}
+        </div>
+        <div>
+          Genre: {{input value=currentRecord.genre class="input"}}
+        </div>
+        Spotify URL:  {{input value=currentRecord.spotifyLink class="input"}}
+      </div>
+    </div>
+    <footer class="card-footer">
+      {{#if currentRecord.id}}
+      <a href="#" class="card-footer-item" {{action (route-action "UpdateItem" currentRecord)}}>Save</a>
+      {{else}}
+      <a href="#" class="card-footer-item" {{action (route-action "CreateItem" currentRecord)}}>Create</a>
+      {{/if}}
+    </footer>
+  </div>
+</div>

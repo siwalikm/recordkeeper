@@ -1,5 +1,24 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="container">
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        {{#link-to "index"}}
+          <img alt="logo" class="vinyl" src="/assets/img/vinyl.png">
+          <h1 class="title">
+            Record Keeper
+          </h1>
+          <h2 class="subtitle">
+            Database of the best record albums from the archives
+          </h2>
+        {{/link-to}}
+        <br>
+        {{#link-to "new" class="button is-dark is-outlined"}}
+          Add New Album
+        {{/link-to}}
 
-{{outlet}}
+      </div>
+    </div>
+  </section>
+  <br>
+  {{outlet}}
+</div>

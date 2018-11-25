@@ -1,0 +1,35 @@
+<div class="card-container">
+  {{#each recordMeta as |item|}}
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Album: <strong>
+            {{item.albumName}}</strong>
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <img alt="album art" class="cover" src={{item.albumCover}}>
+          <div>
+            Artist: <strong>
+              {{item.artistName}}
+            </strong>
+          </div>
+          <div>
+            Year: <strong>
+              {{item.year}} </strong>
+          </div>
+          <div>
+            Genre: <strong>
+              {{item.genre}} </strong>
+          </div>
+          <a target="blank" href={{item.spotifyLink}}>Play on Spotify</a>
+        </div>
+      </div>
+      <footer class="card-footer">
+        {{#link-to "records" item.id class="card-footer-item"}}Edit{{/link-to}}
+        <a href="#" class="card-footer-item" {{action (route-action "deleteItem" item.id)}}>Remove</a>
+      </footer>
+    </div>
+  {{/each}}
+</div>
